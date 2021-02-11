@@ -98,8 +98,8 @@
 		}
 	],
 	"url": "https://gitlab.com/riccisi/foundryvtt-dice-so-nice",
-	"manifest": "https://raw.githubusercontent.com/elivox/dsnfenced/main/module/module.json",
-	"download": "https://github.com/elivox/dsnfenced/blob/main/Fenced-DSN.zip?raw=true",
+	"manifest": "https://raw.githubusercontent.com/elivox/dsn-fenced/main/module/module.json",
+	"download": "https://github.com/elivox/dsn-fenced/blob/main/dsn-fenced.zip?raw=true",
 	"bugs": "https://gitlab.com/riccisi/foundryvtt-dice-so-nice/-/issues",
 	"readme": "https://gitlab.com/riccisi/foundryvtt-dice-so-nice/-/blob/master/README.md"
 }
