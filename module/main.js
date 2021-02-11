@@ -48,6 +48,40 @@ Hooks.once('init', () => {
         config: true
     });
 
+    game.settings.register("dice-so-nice", "leftFenceMargin", {
+        name: "DICESONICE.leftFenceMargin",
+        hint: "DICESONICE.leftFenceMarginHint",
+        scope: "world",
+        type: Number,
+        default: 0,
+        range: {
+            min: 0,
+            max: 800,
+            step: 10
+        },
+        config: true,
+        onChange: () => {
+            location.reload();
+        }
+    });
+
+    game.settings.register("dice-so-nice", "topFenceMargin", {
+        name: "DICESONICE.topFenceMargin",
+        hint: "DICESONICE.topFenceMarginHint",
+        scope: "world",
+        type: Number,
+        default: 0,
+        range: {
+            min: 0,
+            max: 200,
+            step: 5
+        },
+        config: true,
+        onChange: () => {
+            location.reload();
+        }
+    });
+
     game.settings.register("dice-so-nice", "globalAnimationSpeed", {
         name: "DICESONICE.globalAnimationSpeed",
         hint: "DICESONICE.globalAnimationSpeedHint",
@@ -65,6 +99,7 @@ Hooks.once('init', () => {
             location.reload();
         }
     });
+
 
     game.settings.register("dice-so-nice", "enabledSimultaneousRolls", {
         name: "DICESONICE.enabledSimultaneousRolls",
@@ -540,7 +575,9 @@ export class Dice3D {
      * @private
      */
     _buildCanvas() {
-        this.canvas = $('<div id="dice-box-canvas" style="position: absolute; left: 0px; top: 0px;pointer-events: none;"></div>');
+        let leftFenceMargin = game.settings.get("dice-so-nice", "leftFenceMargin");
+        let topFenceMargin = game.settings.get("dice-so-nice", "topFenceMargin");
+        this.canvas = $('<div id="dice-box-canvas" style="position: absolute; left: ' + leftFenceMargin + 'px; top: '+ topFenceMargin + 'px;pointer-events: none;"></div>');
         if(Dice3D.CONFIG.canvasZIndex == "over"){
             this.canvas.css("z-index",1000);
             this.canvas.appendTo($('body'));

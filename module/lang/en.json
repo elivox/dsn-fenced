@@ -67,6 +67,10 @@
     "DICESONICE.animateInlineRollHint" : "When possible, show a 3D dice when an inline roll is detected in the chat.",
     "DICESONICE.allowInteractivity" : "Allow interaction with rolled dice",
     "DICESONICE.allowInteractivityHint" : "Let players grab and throw 3D dice after they've been rolled on the table (this has no effect on the results)",
+    "DICESONICE.leftFenceMargin" : "Left fence margin",
+    "DICESONICE.leftFenceMarginHint" : "How many pixels in from the left is the dice fence?",
+    "DICESONICE.topFenceMargin" : "Top fence margin",
+    "DICESONICE.topFenceMarginHint" : "How many pixels in from the top is the dice fence?",
 
     "DICESONICE.Add" : "Add",
     "DICESONICE.Delete" : "Delete",
